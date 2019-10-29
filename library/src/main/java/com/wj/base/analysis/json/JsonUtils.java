@@ -279,12 +279,13 @@ public class JsonUtils {
 
     /* -----------------------------------------设置值------------------------------------*/
 
-    public static void putValue(JSONObject json, String key, Object value) {
+    public static JSONObject putValue(JSONObject json, String key, Object value) {
         try {
             json.put(key, value);
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        return json;
     }
 
     /**
